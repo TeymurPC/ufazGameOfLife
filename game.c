@@ -12,12 +12,9 @@ void new_random_board(struct board *brd){
     for (int i = 0; i < BOARD_HEIGHT; i++)
     {
         for (int j = 0; j < BOARD_WIDTH; j++){
-            struct cell cll;
-            cll.x = j;
-            cll.y = i;
+            
             int rnd = rand()%10 > 8;
-            cll.dead = rnd;
-            brd->cells[i][j] = cll;
+            brd->cells[i][j] = rnd;
         }
     }
 }
@@ -27,7 +24,7 @@ void print_board(struct board brd){
     {
         for (int j = 0; j < BOARD_WIDTH; j++)
         {
-            printf((brd.cells[i][j].dead ? "\033[07m  \033[m" : "  "));
+            printf((brd.cells[i][j] ? "\033[07m  \033[m" : "  "));
         }
         printf("\n");
         

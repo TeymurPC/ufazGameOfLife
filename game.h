@@ -3,16 +3,28 @@
 #define DEAD_CELL 0
 #define ALIVE_CELL 1
 
-struct cell{
-    int x;
-    int y;
-    unsigned int dead;
-};
+// struct cell{
+//     int x;
+//     int y;
+//     unsigned int dead;
+// };
+
 struct board{
-    struct cell cells[BOARD_WIDTH][BOARD_HEIGHT];
+    unsigned short cells[BOARD_WIDTH][BOARD_HEIGHT];
 };
 
 
 void new_random_board(struct board *brd);
 
 void print_board(struct board);
+
+// print(board)
+// int neighbours(board, x, y)
+// board newboard(oldBoard)
+
+//   1 2 3 4
+//   -------
+// 1|1 0 0 1
+// 2|0 1 0 1
+// 3|1 1 0 1
+// 4|0 1 0 0
