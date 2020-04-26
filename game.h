@@ -19,8 +19,6 @@
 
     void new_random_board(struct board *brd);
 
-    void print_board(struct board);
-
     int neighbours(struct board brd, int x, int y);
     struct board new_board(struct board brd);
     // print(board)
