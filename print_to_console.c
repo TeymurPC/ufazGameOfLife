@@ -2,14 +2,18 @@
 #include "print_to_console.h"
 
 void print_board(struct board brd){
+
+    printf("\e[2J");
+    printf("\e[0;0H");
     for (int i = 0; i < BOARD_HEIGHT; i++)
     {
         for (int j = 0; j < BOARD_WIDTH; j++)
         {
-            printf((brd.cells[i][j] ? "\033[07m  \033[m" : "  "));
+            printf((brd.cells[i][j] == ALIVE_CELL ? "\033[07m  \033[m" : "  "));
         }
         printf("\n");
         
     }
+    // printf("\e[50A\e[50D");
     
 }
