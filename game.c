@@ -4,6 +4,29 @@
 #include <time.h>
 
 
+int neighbours(struct board brd,int  x,int  y){
+
+    int nb_neighbours=0;
+
+    for(int i = -1; i <= 1; i++)
+    {
+        for(int j = -1; j <= 1; j++)
+        {
+            if(brd.cells[x+i][y+j]==ALIVE_CELL)
+            {
+                if(i != 0 && j != 0){
+                   nb_neighbours++;
+                }
+             
+            }
+        }
+
+    }
+    return nb_neighbours;
+
+}
+
+
 void new_random_board(struct board *brd){
     time_t t;
     
