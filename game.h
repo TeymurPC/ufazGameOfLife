@@ -18,6 +18,8 @@ void new_random_board(struct board *brd);
 
 void print_board(struct board);
 
+int neighbours(struct board brd, int x, int y);
+
 // print(board)
 // int neighbours(board, x, y)
 // board newboard(oldBoard)
