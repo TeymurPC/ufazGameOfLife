@@ -1,0 +1,3 @@
+/home/user/ufazGameOfLife/buildCMake/CMakeFiles/edit_cache.dir
+/home/user/ufazGameOfLife/buildCMake/CMakeFiles/rebuild_cache.dir
+/home/user/ufazGameOfLife/buildCMake/CMakeFiles/ufazGameOfLife.dir
