@@ -4,7 +4,7 @@
 #include <time.h>
 
 
-int neighbours(struct board brd,int  x,int  y){
+int neighbours(struct board brd, int x,int y){
 
     int nb_neighbours=0;
 
@@ -12,12 +12,14 @@ int neighbours(struct board brd,int  x,int  y){
     {
         for(int j = -1; j <= 1; j++)
         {
-            if(brd.cells[x+i][y+j]==ALIVE_CELL)
-            {
-                if(i != 0 && j != 0){
-                   nb_neighbours++;
+            if ( !(y+i<0 || x+j<0 || y+i >= BOARD_HEIGHT || x+j >= BOARD_WIDTH) ){
+                if(brd.cells[y+i][x+j] == ALIVE_CELL)
+                {
+                    if(!(i == 0 && j == 0)){
+                        nb_neighbours++;
+                    }
+                
                 }
-             
             }
         }
 
@@ -36,7 +38,7 @@ void new_random_board(struct board *brd){
     {
         for (int j = 0; j < BOARD_WIDTH; j++){
             
-            if (rand()%10 > 8){
+            if (rand()%10 > 7){
                 brd->cells[i][j] = ALIVE_CELL;
             }else{
                 brd->cells[i][j] = DEAD_CELL;
