@@ -1,1 +1,0 @@
-/usr/bin/cc     CMakeFiles/ufazGameOfLife.dir/main.c.o CMakeFiles/ufazGameOfLife.dir/game.c.o CMakeFiles/ufazGameOfLife.dir/print_to_console.c.o  -o ufazGameOfLife 
