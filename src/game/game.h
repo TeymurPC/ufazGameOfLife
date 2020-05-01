@@ -1,6 +1,11 @@
 #ifndef GAME_H
 #define GAME_H
 
+    #include <stdlib.h>
+    #include <stdio.h>
+    #include <time.h>
+
+
     #define BOARD_HEIGHT 50
     #define BOARD_WIDTH 50
     #define DEAD_CELL 0
@@ -32,3 +37,4 @@
     // 3|1 1 0 1
     // 4|0 1 0 0
 #endif
+

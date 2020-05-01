@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <unistd.h>
 #include "game.h"
 #include "print_to_console.h"
