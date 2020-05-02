@@ -1,8 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-    #define BOARD_HEIGHT 80
-    #define BOARD_WIDTH 80
+    #define BOARD_HEIGHT 50
+    #define BOARD_WIDTH 50
     #define DEAD_CELL 0
     #define ALIVE_CELL 1
     #define CIRCULAR_BOARD 1
