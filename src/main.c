@@ -1,6 +1,6 @@
 #include <unistd.h>
-#include "game.h"
-#include "print_to_console.h"
+#include "game/game.h"
+#include "console/print_to_console.h"
 
 int main(int argc, char const *argv[])
 {

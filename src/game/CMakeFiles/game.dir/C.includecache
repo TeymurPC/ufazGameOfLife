@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/Desktop/ufazGameOfLife/src/game/game.c
+game.h
+/home/user/Desktop/ufazGameOfLife/src/game/game.h
+
+/home/user/Desktop/ufazGameOfLife/src/game/game.h
+stdlib.h
+-
+stdio.h
+-
+time.h
+-
+
