@@ -10,4 +10,6 @@
 
     int print_SDL_print(struct board brd);
 
+    void print_SDL_close();
+
 #endif

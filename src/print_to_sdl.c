@@ -1,7 +1,7 @@
 #include "print_to_sdl.h"
 
-    const int SCREEN_WIDTH_G = 640;
-    const int SCREEN_HEIGHT_G = 480;
+    const int SCREEN_WIDTH = BOARD_WIDTH*10;
+    const int SCREEN_HEIGHT = BOARD_HEIGHT*10;
     // The window we'll be rendering to
     SDL_Window* window = NULL;
     
@@ -15,7 +15,7 @@ int print_SDL_init(){
         printf( "SDL could not initialize! SDL_Error: %s\n", SDL_GetError() );
         res = 1;
     }else{
-        window = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH_G, SCREEN_HEIGHT_G, SDL_WINDOW_SHOWN );
+        window = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
         if( window == NULL ){
             printf( "Window could not be created! SDL_Error: %s\n", SDL_GetError() );
             res = 1;
@@ -45,4 +45,14 @@ int print_SDL_print(struct board brd){
         
     }
     SDL_UpdateWindowSurface( window );
+}
+
+void print_SDL_close(){
+    SDL_FreeSurface(screenSurface);
+    screenSurface = NULL;
+
+    SDL_DestroyWindow(window);
+    window = NULL;
+
+    SDL_Quit();
 }
