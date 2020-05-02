@@ -101,6 +101,26 @@ CMakeFiles/ufazGameOfLife.dir/build: ufazGameOfLife
 
 .PHONY : CMakeFiles/ufazGameOfLife.dir/build
 
+# Object files for target ufazGameOfLife
+ufazGameOfLife_OBJECTS = \
+"CMakeFiles/ufazGameOfLife.dir/main.c.o"
+
+# External object files for target ufazGameOfLife
+ufazGameOfLife_EXTERNAL_OBJECTS =
+
+CMakeFiles/CMakeRelink.dir/ufazGameOfLife: CMakeFiles/ufazGameOfLife.dir/main.c.o
+CMakeFiles/CMakeRelink.dir/ufazGameOfLife: CMakeFiles/ufazGameOfLife.dir/build.make
+CMakeFiles/CMakeRelink.dir/ufazGameOfLife: game/libgame.so
+CMakeFiles/CMakeRelink.dir/ufazGameOfLife: console/libconsole.so
+CMakeFiles/CMakeRelink.dir/ufazGameOfLife: CMakeFiles/ufazGameOfLife.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/Desktop/ufazGameOfLife/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CMakeFiles/CMakeRelink.dir/ufazGameOfLife"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ufazGameOfLife.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+CMakeFiles/ufazGameOfLife.dir/preinstall: CMakeFiles/CMakeRelink.dir/ufazGameOfLife
+
+.PHONY : CMakeFiles/ufazGameOfLife.dir/preinstall
+
 CMakeFiles/ufazGameOfLife.dir/requires: CMakeFiles/ufazGameOfLife.dir/main.c.o.requires
 
 .PHONY : CMakeFiles/ufazGameOfLife.dir/requires

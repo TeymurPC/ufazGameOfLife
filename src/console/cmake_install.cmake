@@ -37,18 +37,6 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libconsole.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libconsole.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libconsole.so"
-         RPATH "")
-  endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/user/Desktop/ufazGameOfLife/src/console/libconsole.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libconsole.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libconsole.so")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libconsole.so")
-    endif()
-  endif()
 endif()
 

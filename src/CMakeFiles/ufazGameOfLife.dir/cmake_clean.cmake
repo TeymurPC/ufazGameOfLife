@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ufazGameOfLife.dir/main.c.o"
   "ufazGameOfLife.pdb"
   "ufazGameOfLife"
+  "ufazGameOfLife.pdb"
+  "CMakeFiles/CMakeRelink.dir/ufazGameOfLife"
 )
 
 # Per-language clean rules from dependency scanning.

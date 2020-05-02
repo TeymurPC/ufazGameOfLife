@@ -33,23 +33,7 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/buildCMake/ufazGameOfLife" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/buildCMake/ufazGameOfLife")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/buildCMake/ufazGameOfLife"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/buildCMake" TYPE EXECUTABLE FILES "/home/user/Desktop/ufazGameOfLife/src/ufazGameOfLife")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/buildCMake/ufazGameOfLife" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/buildCMake/ufazGameOfLife")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/buildCMake/ufazGameOfLife"
-         OLD_RPATH "/home/user/Desktop/ufazGameOfLife/src/game:/home/user/Desktop/ufazGameOfLife/src/console:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/buildCMake/ufazGameOfLife")
-    endif()
-  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/buildCMake" TYPE EXECUTABLE FILES "/home/user/Desktop/ufazGameOfLife/src/CMakeFiles/CMakeRelink.dir/ufazGameOfLife")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
