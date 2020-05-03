@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "print_to_console.h"
 
 void print_board(struct board brd, unsigned short debug){

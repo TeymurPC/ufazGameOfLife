@@ -1,7 +1,4 @@
 #include "game.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <time.h>
 
 
 int neighbours_clipped(struct board brd, int x,int y){

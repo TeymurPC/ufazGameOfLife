@@ -1,6 +1,11 @@
 #ifndef GAME_H
 #define GAME_H
 
+    #include <stdlib.h>
+    #include <stdio.h>
+    #include <time.h>
+
+
     #define BOARD_HEIGHT 50
     #define BOARD_WIDTH 50
     #define DEAD_CELL 0
@@ -22,3 +27,4 @@
     struct board new_board(struct board brd);
     
 #endif
+
