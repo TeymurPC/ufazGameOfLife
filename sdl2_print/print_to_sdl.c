@@ -30,9 +30,9 @@ int print_SDL_init(){
 int print_SDL_print(struct board brd){
     
     SDL_FillRect( screenSurface, NULL, SDL_MapRGB( screenSurface->format, 0x00, 0x00, 0x00 ) );
-    for (int i = 0; i < BOARD_HEIGHT; i++)
+    for (int i = 0; i < brd.height; i++)
     {
-        for (int j = 0; j < BOARD_WIDTH; j++)
+        for (int j = 0; j < brd.width; j++)
         {
             // printf((brd.cells[i][j] == ALIVE_CELL ? "\033[07m  \e[0m" : "  "));
             if (brd.cells[i][j] == ALIVE_CELL){
