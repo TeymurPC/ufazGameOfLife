@@ -27,8 +27,7 @@ void neighbours_clipped_test(void){
     CU_ASSERT_EQUAL(neighbours_clipped(test_brd,4,2),5);
     CU_ASSERT_EQUAL(neighbours_clipped(test_brd,3,2),3);
     CU_ASSERT_EQUAL(neighbours_clipped(test_brd,6,1),2);
-
-
+    
 
 }
 
