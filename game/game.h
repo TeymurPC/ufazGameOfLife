@@ -15,16 +15,20 @@
 
 
     struct board{
-        unsigned short cells[BOARD_WIDTH][BOARD_HEIGHT];
+        unsigned short **cells;
         unsigned short circular_flag;
+        int height;
+        int width;
     };
 
 
-    void new_random_board(struct board *brd, unsigned short circular_flag);
+    void new_random_board(struct board *brd);
 
     int neighbours_clipped(struct board brd, int x, int y);
     int neighbours_circular(struct board brd, int x, int y);
-    struct board new_board(struct board brd);
+    struct board next_board(struct board brd);
+    void init_board(struct board *brd, int width, int height, unsigned short circular_flag);
+    void destroy_board(struct board *brd);
     
 #endif
 
