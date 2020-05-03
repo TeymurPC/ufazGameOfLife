@@ -3,8 +3,7 @@
 
     #include <stdio.h>
     #include "../game/game.h"
-    
-
-    void print_board(struct board brd);
-    
+    #define DEBUG_TRUE 1
+    #define DEBUG_FALSE 0
+    void print_board(struct board brd, unsigned short debug);
 #endif
