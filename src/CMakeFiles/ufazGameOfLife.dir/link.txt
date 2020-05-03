@@ -1,1 +1,0 @@
-/usr/bin/cc     CMakeFiles/ufazGameOfLife.dir/main.c.o  -o ufazGameOfLife game/libgame.so console/libconsole.so -Wl,-rpath,/home/user/Desktop/ufazGameOfLife/src/game:/home/user/Desktop/ufazGameOfLife/src/console 
