@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include <SDL2/SDL.h>
+// #include <SDL2/SDL.h>
 #include <signal.h>
 #include "game.h"
 #include "print_to_console.h"

@@ -1,6 +1,5 @@
-#include "game/game.h"
-#include <CUnit/CUnit.h>
-#include <CUnit/Basic.h>
+#include "game.h"
+
 
 
 void neighbours_clipped_test(void){
