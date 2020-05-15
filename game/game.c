@@ -82,7 +82,6 @@ void new_random_board(struct board *brd){
 struct board next_board(struct board brd){
     struct board next_board;
     init_board(&next_board, brd.width, brd.height, brd.circular_flag);
-    // next_board.circular_flag = brd.circular_flag;
     for (int i = 0; i< brd.height; i++){
         for (int j = 0; j < brd.width; j++){
             int nghbrs = 0;

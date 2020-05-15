@@ -5,7 +5,7 @@
 
 
 void neighbours_clipped_test(void){
-
+   
     struct board test_brd;
     test_brd.circular_flag=CLIPPED_BOARD;
     test_brd.width=7;
@@ -29,7 +29,11 @@ void neighbours_clipped_test(void){
     CU_ASSERT_EQUAL(neighbours_clipped(test_brd,3,2),3);
     CU_ASSERT_EQUAL(neighbours_clipped(test_brd,6,1),2);
 
-
+    for (int i = 0; i < test_brd.height; i++){
+        free((&test_brd)->cells[i]);
+    }
+    free((&test_brd)->cells);
+    
 
 }
 
@@ -58,6 +62,11 @@ void neighbours_circular_test(void){
     CU_ASSERT_EQUAL(neighbours_circular(test_brd,0,3),3);
     CU_ASSERT_EQUAL(neighbours_circular(test_brd,4,0),4);
     CU_ASSERT_EQUAL(neighbours_circular(test_brd,3,3),1);
+
+   for (int i = 0; i < test_brd.height; i++){
+        free((&test_brd)->cells[i]);
+    }
+    free((&test_brd)->cells);
 
 }
 
@@ -109,6 +118,18 @@ void neighbours_circular_test(void){
     CU_ASSERT(next_board(old_brd).cells[2][3] == new_brd.cells[2][3]);
     CU_ASSERT(next_board(old_brd).cells[0][3] == new_brd.cells[0][3]);
     CU_ASSERT(next_board(old_brd).cells[1][6] == new_brd.cells[1][6]);
+    
+    for (int i = 0; i < old_brd.height; i++){
+        free((&old_brd)->cells[i]);
+    }
+    free((&old_brd)->cells);
+
+     for (int i = 0; i < new_brd.height; i++){
+        free((&new_brd)->cells[i]);
+    }
+    free((&new_brd)->cells);
+
+
 
  }
 
@@ -158,6 +179,16 @@ void neighbours_circular_test(void){
     CU_ASSERT_EQUAL(next_board(old_brd).cells[2][3],new_brd.cells[2][3]);
     CU_ASSERT_EQUAL(next_board(old_brd).cells[0][3],new_brd.cells[0][3]);
     CU_ASSERT_EQUAL(next_board(old_brd).cells[3][4],new_brd.cells[3][4]);
+
+     for (int i = 0; i < old_brd.height; i++){
+        free((&old_brd)->cells[i]);
+    }
+    free((&old_brd)->cells);
+
+     for (int i = 0; i < new_brd.height; i++){
+        free((&new_brd)->cells[i]);
+    }
+    free((&new_brd)->cells);
 
  }
 

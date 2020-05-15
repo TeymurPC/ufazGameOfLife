@@ -9,11 +9,13 @@ void print_board(struct board brd, unsigned short debug){
     {
         for (int j = 0; j < brd.width; j++)
         {
-            if(debug == DEBUG_FALSE)
+            if(debug == DEBUG_FALSE){
                 printf((brd.cells[i][j] == ALIVE_CELL ? "\033[07m  \e[0m" : "  "));
-            else
+            }
+            else{
                 printf( (brd.cells[i][j] == ALIVE_CELL ? "\033[07m%d \e[0m" : "%d "),
                     (brd.circular_flag == CLIPPED_BOARD ? neighbours_clipped(brd, j, i) : neighbours_circular(brd, j, i)) );
+            }
         }
         printf("\n");
         
