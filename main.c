@@ -1,10 +1,10 @@
 #include <unistd.h>
-// #include <SDL2/SDL.h>
+#include <SDL2/SDL.h>
 #include <signal.h>
 #include <getopt.h>
 #include "game/game.h"
 #include "console/print_to_console.h"
-#include "print_to_sdl.h"
+#include "sdl2_print/print_to_sdl.h"
 
 int quit = 0;
 

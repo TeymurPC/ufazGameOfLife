@@ -4,8 +4,7 @@ cmake_policy(SET CMP0076 NEW)
 project(ufazGameOfLife LANGUAGES C)
 
 
-add_subdirectory(game)
-add_subdirectory(console)
+add_subdirectory(game console sdl2_print) 
 
 #add_library(${PROJECT_NAME} SHARED "")
 
@@ -38,7 +37,7 @@ COMMAND gcovr  --html --html-details -o GameOfLife.html -r ${CMAKE_SOURCE_DIR}${
 WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 
 
-target_link_libraries(${PROJECT_NAME} PUBLIC game console)
+target_link_libraries(${PROJECT_NAME} PUBLIC game console sdl2_print)
 
 install(TARGETS ${PROJECT_NAME}  DESTINATION bin)
 
