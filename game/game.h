@@ -4,8 +4,7 @@
     #include <stdlib.h>
     #include <stdio.h>
     #include <time.h>
-    #include <CUnit/CUnit.h>
-    #include <CUnit/Basic.h>
+    
 
 
     #define BOARD_HEIGHT 50
@@ -33,10 +32,7 @@
     void destroy_board(struct board *brd);
 
 
-    void neighbours_clipped_test(void);
-    void neighbours_circular_test(void);
-    void next_board_clipped_test(void);
-    void next_board_circular_test(void);
+    
     
 #endif
 

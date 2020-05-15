@@ -1,4 +1,6 @@
-#include "game.h"
+#include "game/game.h"
+#include <CUnit/CUnit.h>
+#include <CUnit/Basic.h>
 
 
 
