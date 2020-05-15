@@ -29,6 +29,7 @@
     #include <stdlib.h>
     #include <stdio.h>
     #include <time.h>
+    
 
     /**
      * @brief Definitions of DEAD and ALIVE Cells
@@ -156,6 +157,9 @@
      * @param brd the board to be destroyed
      */
     void destroy_board(struct board *brd);
+
+
+    
     
 #endif
 

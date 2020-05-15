@@ -3,6 +3,7 @@
 #include <CUnit/Basic.h>
 
 
+
 void neighbours_clipped_test(void){
    
     struct board test_brd;
