@@ -35,7 +35,7 @@ WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 
 add_custom_target(cover_html
 COMMAND cmake --build . --target libtest 
-COMMAND gcovr  --html --html-details -o GameOfLife.html -r ${CMAKE_SOURCE_DIR}${CMAKE_BINARY_DIR} $<TARGET_FILE:${Game_Test}>
+COMMAND gcovr  --html --html-details -o GameOfLife.html -r ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} $<TARGET_FILE:${Game_Test}>
 WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 
 
