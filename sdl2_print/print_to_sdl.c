@@ -1,15 +1,15 @@
 #include "print_to_sdl.h"
 
-    const int SCREEN_WIDTH = BOARD_WIDTH*10;
-    const int SCREEN_HEIGHT = BOARD_HEIGHT*10;
     // The window we'll be rendering to
     SDL_Window* window = NULL;
     
     //The surface contained by the window
     SDL_Surface* screenSurface = NULL;
 
-int print_SDL_init(){
+int print_SDL_init(int brd_width, int brd_height){
     int res = 0;
+    const int SCREEN_WIDTH = brd_width*10;
+    const int SCREEN_HEIGHT = brd_height*10;
     if( SDL_Init( SDL_INIT_VIDEO | SDL_INIT_EVENTS ) < 0 )
     {
         printf( "SDL could not initialize! SDL_Error: %s\n", SDL_GetError() );

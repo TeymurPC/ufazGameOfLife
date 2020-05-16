@@ -25,16 +25,18 @@
 #ifndef PRINT_TO_SDL_H
 #define PRINT_TO_SDL_H
 
-    #include "game.h"
+    #include "../game/game.h"
     #include "SDL2/SDL.h"
 
 
     /**
      * @brief Initialize GUI
      * 
+     * @param brd_width Board Width
+     * @param brd_height Board Height
      * @return int 0 if succesfully initialized GUI, 1 if had problem while initializing GUI
      */
-    int print_SDL_init();
+    int print_SDL_init(int brd_width, int brd_height);
 
     /**
      * @brief Show current board on GUI

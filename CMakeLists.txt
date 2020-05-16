@@ -4,9 +4,9 @@ cmake_policy(SET CMP0076 NEW)
 project(ufazGameOfLife LANGUAGES C)
 
 
-add_subdirectory(game)
+add_subdirectory(game) 
 add_subdirectory(console)
-
+add_subdirectory(sdl2_print)
 #add_library(${PROJECT_NAME} SHARED "")
 
 set(SRC main.c)
@@ -18,6 +18,7 @@ target_sources(${PROJECT_NAME} PUBLIC ${SRC} )
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(${PROJECT_NAME} PUBLIC gcov)
 target_compile_options(${PROJECT_NAME} PUBLIC "--coverage")
+
 
 set(Game_Test libtest )
 add_executable(${Game_Test} "" )
@@ -38,7 +39,7 @@ COMMAND gcovr  --html --html-details -o GameOfLife.html -r ${CMAKE_SOURCE_DIR}${
 WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 
 
-target_link_libraries(${PROJECT_NAME} PUBLIC game console)
+target_link_libraries(${PROJECT_NAME} PUBLIC game console sdl2_print)
 
 install(TARGETS ${PROJECT_NAME}  DESTINATION bin)
 
