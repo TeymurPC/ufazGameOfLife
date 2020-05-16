@@ -7,7 +7,7 @@ project(ufazGameOfLife LANGUAGES C)
 add_subdirectory(game) 
 add_subdirectory(console)
 add_subdirectory(sdl2_print)
-#add_library(${PROJECT_NAME} SHARED "")
+
 
 set(SRC main.c)
 
@@ -16,10 +16,6 @@ add_executable(${PROJECT_NAME} "" )
 target_sources(${PROJECT_NAME} PUBLIC ${SRC} )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
-#target_link_libraries(${PROJECT_NAME} PUBLIC gcov)
-#target_compile_options(${PROJECT_NAME} PUBLIC "--coverage")
-#target_link_options(${PROJECT_NAME} PUBLIC "--coverage")
 
 
 set(Game_Test libtest )
