@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 
     SDL_Event e;
     if(print_mode == SDL_PRINT){
-        print_SDL_init();
+        print_SDL_init(brd_width, brd_height);
         print_SDL_print(brd);
     }else{
         print_board(brd, debug_mode);
