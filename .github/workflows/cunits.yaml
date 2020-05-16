@@ -8,6 +8,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: APT Update
+      run: sudo apt-get update
+
     - name: Install CUnit
       run: sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev
 
