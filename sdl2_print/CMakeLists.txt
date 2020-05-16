@@ -1,17 +1,19 @@
 cmake_minimum_required(VERSION 3.5.0)
 cmake_policy(SET CMP0076 NEW)
 
-project(sdl2_print) LANGUAGES C)
+project(sdl2_print LANGUAGES C)
 
 find_package(SDL2 CONFIG REQUIRED )
+
+include_directories(${SDL2_INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME} SHARED "")
 
 target_sources(${PROJECT_NAME} PUBLIC print_to_sdl.c print_to_sdl.h)
 
-target_link_libraries(${PROJECT_NAME} PUBLIC SDL2::SDL2 SDL2::SDL2main)
+target_link_libraries(${PROJECT_NAME} PUBLIC SDL2)
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})#-I.
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 target_include_directories(${PROJECT_NAME} PUBLIC ../game)
 
