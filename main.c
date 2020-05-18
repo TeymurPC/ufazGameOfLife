@@ -1,3 +1,58 @@
+/********************************************************************************************
+ * Copyright (C) 2020 by Hasanzada Aghateymur and Gulzar Safarli                            *
+ *                                                                                          *
+ * This file is part of UFAZ Game Of Life Project.                                          *
+ *  UFAZ Game Of Life Project is free software: you can redistribute it and/or modify it    *
+ *  under the terms of the GNU Lesser General Public License as published                   *
+ *  by the Free Software Foundation, either version 3 of the License, or                    *
+ *  (at your option) any later version.                                                     *
+ *                                                                                          *
+ *  UFAZ Game Of Life Project is distributed in the hope that it will be useful             *
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of                          *
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                                    *
+ ******************************************************************************************/
+
+/**
+ * @file main.c
+ * @brief This project is implementation of a famous cell automata project - Game of Life.
+ * @author Aghateymur Hasanzada and Gulzar Safarli
+ * 
+ * @version 1.0.0
+ * @date 2020-05-04
+ */
+
+/*! \mainpage UFAZ Game Of Life
+ *
+ * This project is an implementation of a famous cell automata project - Game Of Life
+ * 
+ * Contents: 
+ * - \subpage howToInstall "How to install this project"
+ * - \subpage howToRun "How to run this project"
+ */
+
+/*! \page howToInstall How to install
+ * First clone the project with:
+ * \code
+ * git clone https://github.com/ufazGameOfLife/ufazGameOfLife.git
+ * \endcode
+ * Make sure you have make, cmake, sdl and cunit installed then:
+ * \code
+ * cd ufazGameOfLife
+ * cmake .
+ * make
+ * \endcode
+ */
+
+/*! \page howToRun How to run
+ * Usage:\n
+ * ./ufazGameOfLife [-w width] [-h height] [options]\n
+ * Options:\n
+ * &emsp;-s&emsp;&emsp;Print to SDL instead of standart output\n
+ * &emsp;-c&emsp;&emsp;Make board type Circular instead of Clipped\n
+ * &emsp;-d&emsp;&emsp;Debug mode on for standart input\n
+ */
+
+
 #include <unistd.h>
 #include <SDL2/SDL.h>
 #include <signal.h>
